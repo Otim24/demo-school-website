@@ -1,0 +1,521 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const stats = [
+  { value: '97.4%', label: 'UNEB UCE Pass Rate', detail: 'Consistently Grade 1 & 2' },
+  { value: '1,200+', label: 'Enrolled Scholars', detail: 'From Gulu, Lira, Kitgum & Pader' },
+  { value: '85+', label: 'Certified Educators', detail: 'Over 60% hold Postgraduate Degrees' },
+  { value: '20+', label: 'Years of Excellence', detail: 'Serving Northern Uganda since 2003' },
+];
+
+const pillars = [
+  {
+    title: 'Christian Character & Ethics',
+    desc: 'Forming young men and women of unyielding moral integrity, grounded in biblical leadership and servant service.',
+  },
+  {
+    title: 'Academic Distinction',
+    desc: 'Mastery of the UNEB curriculum with rigorous laboratory practicals, daily tutorials, and continuous assessments.',
+  },
+  {
+    title: 'STEM & Digital Readiness',
+    desc: 'Modern chemistry, physics, biology, and computer laboratories preparing future engineers, doctors, and technologists.',
+  },
+  {
+    title: 'Regional Leadership',
+    desc: 'Empowering the next generation of civil, church, and entrepreneurial leaders for the transformation of Acholiland.',
+  },
+  {
+    title: 'Discipline & Wholesome Boarding',
+    desc: 'A secure, serene, and structured residential environment fostering independence, brotherhood, and sisterhood.',
+  },
+  {
+    title: 'Athletics & Cultural Arts',
+    desc: 'Competitive sports, regional debate champions, school choir, and creative arts nurturing well-rounded graduates.',
+  },
+];
+
+const campusLife = [
+  {
+    title: 'Advanced Science Laboratories',
+    category: 'STEM & Research',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80',
+    description: 'Equipped for UNEB practical examinations in Physics, Chemistry, and Biology.',
+    span: 'md:col-span-2 md:row-span-2',
+    height: 'h-80 md:h-full',
+  },
+  {
+    title: 'Daily Chapel & Fellowship',
+    category: 'Spiritual Formation',
+    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    description: 'Weekly morning devotionals and community worship in Gulu.',
+    span: 'md:col-span-1',
+    height: 'h-64',
+  },
+  {
+    title: 'Comprehensive Reference Library',
+    category: 'Academics',
+    image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80',
+    description: 'Over 15,000 curriculum texts, past papers, and digital research cubicles.',
+    span: 'md:col-span-1',
+    height: 'h-64',
+  },
+  {
+    title: 'Regional Football & Athletics League',
+    category: 'Co-Curricular Sports',
+    image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80',
+    description: 'Grass pitch for football, netball courts, and track field competitions.',
+    span: 'md:col-span-1',
+    height: 'h-64',
+  },
+  {
+    title: 'Debate & Public Speaking Council',
+    category: 'Leadership & Arts',
+    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80',
+    description: '2024 Northern Uganda Inter-School Debate Champions.',
+    span: 'md:col-span-1',
+    height: 'h-64',
+  },
+];
+
+const news = [
+  {
+    date: '14 Oct 2024',
+    title: 'UCE 2024 Examination Candidates Commissioning Service',
+    summary: 'Senior Four candidates were formally blessed during an interdenominational prayer service attended by parents and diocesan clergy.',
+    category: 'Academic Milestone',
+  },
+  {
+    date: '28 Sep 2024',
+    title: 'Commissioning of the New Multipurpose STEM Science Wing',
+    summary: 'A state-of-the-art facility featuring 120 laboratory workstations and high-speed broadband internet was unveiled.',
+    category: 'Campus Development',
+  },
+  {
+    date: '10 Aug 2024',
+    title: 'Grace Christian Claims Northern Region Debate Trophy',
+    summary: 'Our Senior Six parliamentary debate team prevailed over 18 schools at the Gulu City Inter-School Championships.',
+    category: 'Co-Curricular Honors',
+  },
+];
+---
+
+<Layout title="Home" description="Grace Christian High School – Leading secondary boarding institution in Gulu, Northern Uganda. UNEB O-Level and A-Level curriculum.">
+
+  <!-- ════════════════════════════════════════
+       MINIMALISTIC, FUNCTIONAL & PRESTIGIOUS HERO SECTION
+       (Fully Optimized for Mobile Phones & Tablets)
+  ════════════════════════════════════════ -->
+  <section class="relative min-h-[82vh] sm:min-h-[88vh] flex items-center justify-center bg-slate-950 overflow-hidden pt-32 pb-14 sm:pt-40 sm:pb-20 lg:pt-48 lg:pb-24">
+    <!-- Authentic African Classroom Photography Background (Vibrant & Clear) -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=2000&q=85"
+        alt="African secondary school students smiling in classroom uniform"
+        class="w-full h-full object-cover object-center opacity-70"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/50"></div>
+    </div>
+
+    <!-- Main Clean Minimalistic Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Accreditation & Subtitle -->
+      <div class="reveal inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-500/20 border border-amber-400/50 text-amber-300 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] mb-4 sm:mb-6 shadow-lg backdrop-blur-sm">
+        <span>UNEB Examination Centre #1247-C</span>
+        <span class="text-white/40">·</span>
+        <span>Gulu City, Uganda</span>
+      </div>
+
+      <!-- Dignified Clean Headline -->
+      <h1 class="reveal text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white tracking-tight leading-[1.12] mb-4 sm:mb-6">
+        Grace Christian High School
+        <span class="block text-xl sm:text-3xl md:text-4xl text-amber-400 font-sans font-semibold tracking-normal mt-2 sm:mt-3">
+          Disciplined Minds. Principled Leaders.
+        </span>
+      </h1>
+
+      <p class="reveal text-slate-200 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-normal mb-8 sm:mb-10 px-2 drop-shadow">
+        Northern Uganda's premier secondary boarding school. Providing rigorous UNEB O-Level &amp; A-Level education grounded in Christian values since 2003.
+      </p>
+
+      <!-- Primary Action Buttons (Touch-Friendly, Mobile & Tablet Streamlined) -->
+      <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-lg mx-auto">
+        <a href="/admissions" class="btn-gold w-full sm:w-auto text-center py-3.5 px-8 text-xs font-bold uppercase tracking-widest shadow-xl">
+          Apply for 2025 Placement
+        </a>
+        <div class="grid grid-cols-2 gap-2 w-full sm:w-auto sm:flex sm:items-center">
+          <a href="/academics" class="btn-outline-white py-3 px-5 text-xs font-bold uppercase tracking-wider text-center">
+            Academics
+          </a>
+          <a href="tel:+256784811929" class="btn-outline-white py-3 px-5 text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+            <span>Call Us</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ARCHITECTURAL INSTITUTIONAL HIGHLIGHTS STRIP
+       (Clean, Non-Crowded, Touch-Friendly on Phones & Tablets)
+  ════════════════════════════════════════ -->
+  <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-8 mb-8 sm:mb-12">
+    <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+      <a href="/admissions" class="p-4 sm:p-5 bg-slate-900 border border-slate-800 hover:border-amber-400/70 shadow-xl transition-all duration-300 group block">
+        <span class="text-amber-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest block mb-1 group-hover:text-amber-300">Intake 2025</span>
+        <span class="text-white text-xs sm:text-sm font-semibold block">S.1 &amp; S.5 Admissions</span>
+        <span class="text-slate-400 text-[11px] mt-1 hidden sm:block">Applications open for Day &amp; Boarding scholars &rarr;</span>
+      </a>
+      <a href="/academics" class="p-4 sm:p-5 bg-slate-900 border border-slate-800 hover:border-amber-400/70 shadow-xl transition-all duration-300 group block">
+        <span class="text-amber-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest block mb-1 group-hover:text-amber-300">UNEB Performance</span>
+        <span class="text-white text-xs sm:text-sm font-semibold block">97.4% Grade 1 &amp; 2</span>
+        <span class="text-slate-400 text-[11px] mt-1 hidden sm:block">Ranked #1 non-govt school in Northern Uganda &rarr;</span>
+      </a>
+      <a href="/leadership" class="p-4 sm:p-5 bg-slate-900 border border-slate-800 hover:border-amber-400/70 shadow-xl transition-all duration-300 group block">
+        <span class="text-amber-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest block mb-1 group-hover:text-amber-300">Faculty Ratio</span>
+        <span class="text-white text-xs sm:text-sm font-semibold block">1:15 Mentorship</span>
+        <span class="text-slate-400 text-[11px] mt-1 hidden sm:block">Resident educators living on Acholi Road campus &rarr;</span>
+      </a>
+      <a href="mailto:info@gracechristiangulu.ac.ug" class="p-4 sm:p-5 bg-slate-900 border border-slate-800 hover:border-amber-400/70 shadow-xl transition-all duration-300 group block">
+        <span class="text-amber-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest block mb-1 group-hover:text-amber-300">Direct Secretariat</span>
+        <span class="text-white text-xs sm:text-sm font-semibold block truncate">info@gracechristiangulu.ac.ug</span>
+        <span class="text-slate-400 text-[11px] mt-1 hidden sm:block">Official inquiries &amp; campus visitation booking &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       INSTITUTIONAL METRICS
+  ════════════════════════════════════════ -->
+  <section class="py-16 bg-slate-100 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger">
+        {stats.map((s) => (
+          <div class="reveal bg-white border border-slate-200 border-l-4 border-l-amber-500 p-6 shadow-sm hover:shadow-md transition-all">
+            <div class="text-3xl sm:text-4xl font-serif font-bold text-slate-950 mb-1">
+              {s.value}
+            </div>
+            <div class="text-xs uppercase tracking-widest font-bold text-slate-900 mb-1">
+              {s.label}
+            </div>
+            <div class="text-slate-500 text-xs">
+              {s.detail}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ABOUT / PROVOST WELCOME (WITH AFRICAN ADULT & STUDENT IMAGERY)
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        
+        <!-- Left: Image with African Adult Mentorship -->
+        <div class="reveal-left lg:col-span-5 relative">
+          <div class="relative z-10 border-4 border-white shadow-2xl bg-white overflow-hidden group">
+            <img
+              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+              alt="African teacher instructing secondary students in classroom"
+              class="w-full h-[440px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="p-6 bg-slate-900 text-white">
+              <p class="font-serif italic text-sm text-slate-300 leading-relaxed mb-3">
+                "Our calling is to build not merely successful examinees, but principled leaders who will govern this nation with righteousness and excellence."
+              </p>
+              <div class="flex items-center justify-between border-t border-slate-800 pt-3">
+                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Mrs. Eunice Atim, MEd</span>
+                <span class="text-slate-400 text-[11px]">Headmistress</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Narrative & Mission -->
+        <div class="reveal-right lg:col-span-7 space-y-6">
+          <div class="section-tag">Northern Uganda Heritage</div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-slate-900 leading-tight">
+            Rooted in Gulu, <br/>
+            <span class="text-amber-600">Revered Nationwide.</span>
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Established in 2003 on Acholi Road, Grace Christian High School was born out of an urgent regional conviction: that Northern Uganda deserved a secondary institution of uncompromising academic calibre rooted in Christian truth.
+          </p>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Today, our 12-acre campus accommodates over 1,200 scholars from across Acholi, Lango, and West Nile sub-regions. With fully equipped laboratory complexes, certified educators, and dedicated boarding accommodations, we set the benchmark for secondary education in Eastern Africa.
+          </p>
+
+          <div class="pt-4 grid sm:grid-cols-2 gap-4 border-t border-slate-200">
+            <div class="border-l-2 border-slate-900 pl-4">
+              <h4 class="font-serif font-bold text-slate-900 text-base">Fully UNEB Accredited</h4>
+              <p class="text-slate-500 text-xs mt-1">Direct testing centre for both UCE and UACE national examinations.</p>
+            </div>
+            <div class="border-l-2 border-slate-900 pl-4">
+              <h4 class="font-serif font-bold text-slate-900 text-base">Holistic Boarding</h4>
+              <p class="text-slate-500 text-xs mt-1">Supervised dormitories, 24/7 security, and dedicated medical infirmary.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="/about" class="btn-navy">
+              Our Heritage &amp; Story
+            </a>
+            <a href="/leadership" class="btn-gold">
+              Board of Directors &amp; Faculty
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CORE PILLARS (WARM SLATE WITH AFRICAN EDUCATIONAL ACCENT)
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-slate-50 border-b border-slate-200 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="section-tag justify-center">Institutional Foundation</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+          The Six Pillars of Grace Christian
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Our graduates are distinguished by intellectual curiosity, moral fortitude, and active community responsibility.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 stagger">
+        {pillars.map((p, i) => (
+          <div class="reveal group border border-slate-200 hover:border-amber-400 bg-white p-7 sm:p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-5">
+              <span class="font-serif font-bold text-2xl text-slate-300 group-hover:text-amber-500 transition-colors">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <div class="w-8 h-8 border border-slate-200 group-hover:border-amber-400 flex items-center justify-center transition-colors">
+                <svg class="w-4 h-4 text-slate-700 group-hover:text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-slate-900 mb-3 group-hover:text-amber-600 transition-colors">
+              {p.title}
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              {p.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CAMPUS LIFE PHOTO MOSAIC (EYE-CATCHING REAL PHOTOGRAPHY)
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-slate-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <div>
+          <div class="section-tag text-amber-400">Campus Experience</div>
+          <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2">
+            Vibrant Life in <span class="text-amber-400">Gulu</span>
+          </h2>
+        </div>
+        <p class="text-slate-400 text-sm max-w-md">
+          A dynamic setting where academics, faith, athletics, and brotherhood unite on a secure, self-contained estate.
+        </p>
+      </div>
+
+      <!-- Real Photography Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger">
+        {campusLife.map((item) => (
+          <div class={`reveal group relative overflow-hidden bg-slate-900 border border-slate-800 hover:border-amber-400/50 transition-all duration-500 ${item.span} ${item.height}`}>
+            <img
+              src={item.image}
+              alt={item.title}
+              class="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+            
+            <!-- Information Layer -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 space-y-2">
+              <span class="inline-block px-3 py-1 bg-amber-500 text-slate-950 text-[10px] font-bold uppercase tracking-widest">
+                {item.category}
+              </span>
+              <h3 class="text-xl sm:text-2xl font-serif font-bold text-white">
+                {item.title}
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm line-clamp-2 max-w-xl">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ACADEMIC TRACKS PREVIEW (WITH AFRICAN GRADUATION PHOTOGRAPHY)
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <div class="reveal-left lg:col-span-5 space-y-6">
+          <div class="section-tag">National Curriculum</div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 leading-tight">
+            Comprehensive <br/>
+            <span class="text-amber-600">O-Level &amp; A-Level Tracks</span>
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Grace Christian High School strictly adheres to the UNEB national syllabus while integrating enrichment programmes in computer science, French, literature, and entrepreneurship.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="p-5 border border-slate-200 bg-slate-50 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-serif font-bold text-slate-900 text-base">Ordinary Level (S.1 – S.4)</span>
+                <span class="text-amber-600 text-xs font-bold uppercase">UCE Award</span>
+              </div>
+              <p class="text-slate-500 text-xs leading-relaxed">
+                Compulsory sciences, mathematics, humanities, and languages with weekly practical laboratory tests.
+              </p>
+            </div>
+
+            <div class="p-5 border border-slate-200 bg-slate-50 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-serif font-bold text-slate-900 text-base">Advanced Level Sciences (S.5 – S.6)</span>
+                <span class="text-amber-600 text-xs font-bold uppercase">UACE Award</span>
+              </div>
+              <p class="text-slate-500 text-xs leading-relaxed">
+                Direct tracks into Medicine, Civil &amp; Mechanical Engineering, Computer Science, and Agriculture.
+              </p>
+            </div>
+
+            <div class="p-5 border border-slate-200 bg-slate-50 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-serif font-bold text-slate-900 text-base">Advanced Level Arts &amp; Economics</span>
+                <span class="text-amber-600 text-xs font-bold uppercase">UACE Award</span>
+              </div>
+              <p class="text-slate-500 text-xs leading-relaxed">
+                Premier pathways for Law, Journalism, Banking &amp; Finance, Education, and International Relations.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="/academics" class="btn-navy">
+              View Detailed Subject Combinations
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal-right lg:col-span-7">
+          <div class="relative border-4 border-slate-100 shadow-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
+              alt="Graduating secondary school African students"
+              class="w-full h-[450px] sm:h-[520px] object-cover"
+            />
+            <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent text-white">
+              <div class="text-amber-400 text-xs font-bold uppercase tracking-widest mb-1">University Matriculation</div>
+              <div class="text-lg sm:text-2xl font-serif font-bold">Over 80% of our A-Level graduates gain direct admission to Makerere, Kyambogo, and Gulu University.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       LATEST NEWS & NOTICES
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
+        <div>
+          <div class="section-tag">Campus News &amp; Events</div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+            Dispatches from the Hill
+          </h2>
+        </div>
+        <a href="/contact" class="text-xs uppercase tracking-widest font-bold text-amber-600 hover:text-slate-900 flex items-center gap-1.5 transition-colors">
+          Contact Secretariat
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 stagger">
+        {news.map((item) => (
+          <article class="reveal group bg-white border border-slate-200 hover:border-amber-400 p-7 sm:p-8 transition-all duration-300 hover:shadow-xl">
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-4 pb-3 border-b border-slate-100">
+              <span class="font-bold text-amber-600 uppercase tracking-wider">{item.category}</span>
+              <span>{item.date}</span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-slate-900 mb-3 group-hover:text-amber-600 transition-colors leading-snug">
+              {item.title}
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+              {item.summary}
+            </p>
+            <span class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-slate-900 group-hover:text-amber-600 transition-colors">
+              Official Bulletin Details
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </article>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FINAL CALL TO ACTION (AUTHENTIC AFRICAN SCHOLARS BACKDROP)
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-slate-950 text-white relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=85"
+        alt="African secondary school students collaborating and studying"
+        class="w-full h-full object-cover opacity-65"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div class="reveal text-amber-400 text-xs font-bold uppercase tracking-[0.3em] mb-4">
+        2025 Admissions Open · Gulu City
+      </div>
+      <h2 class="reveal text-3xl sm:text-5xl font-serif font-bold text-white mb-6">
+        Secure Your Child's Academic &amp; Moral Future Today
+      </h2>
+      <p class="reveal text-slate-200 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10 px-2 drop-shadow">
+        Places for Senior One and Senior Five are strictly merit-based. Review our requirements and submit your application online or visit our admissions bureau on Acholi Road.
+      </p>
+      <div class="reveal flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-md sm:max-w-none mx-auto">
+        <a href="/admissions" class="btn-gold py-4 text-center">
+          Start Application Process
+        </a>
+        <a href="tel:+256784811929" class="btn-outline-white py-4 text-center flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          Call Admissions (+256 784 811 929)
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

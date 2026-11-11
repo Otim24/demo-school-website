@@ -1,0 +1,286 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const contactChannels = [
+  {
+    title: 'Admissions Bureau',
+    detail: 'Acholi Road Campus, Gulu City',
+    subtext: 'Monday – Friday: 8:00 AM – 5:00 PM EAT',
+    actionText: 'Get Campus Directions',
+    actionLink: 'https://maps.google.com/?q=Gulu+Uganda',
+  },
+  {
+    title: 'Telephone Inquiries',
+    detail: '+256 784 811 929',
+    subtext: 'Direct line to Registrar & Principal',
+    actionText: 'Call Office Directly',
+    actionLink: 'tel:+256784811929',
+  },
+  {
+    title: 'General Secretariat Email',
+    detail: 'info@gracechristiangulu.ac.ug',
+    subtext: 'Official inquiries & general correspondence',
+    actionText: 'Write Secretariat',
+    actionLink: 'mailto:info@gracechristiangulu.ac.ug',
+  },
+  {
+    title: 'Admissions & Records Email',
+    detail: 'admissions@gracechristiangulu.ac.ug',
+    subtext: 'Candidate dossiers, result slips & registration',
+    actionText: 'Submit Academic Dossier',
+    actionLink: 'mailto:admissions@gracechristiangulu.ac.ug',
+  },
+];
+
+const travelRoutes = [
+  {
+    origin: 'From Kampala & Entebbe International Airport',
+    directions: 'Take the Kampala–Gulu Highway (A109) via Karuma Bridge (approx. 330km, 4.5 hours driving time). Upon arrival at Gulu Main Roundabout, branch onto Acholi Road heading northwest for 2.2 kilometres.',
+  },
+  {
+    origin: 'From Lira, Kitgum & Pader Municipalities',
+    directions: 'Access Gulu City via the Kitgum–Gulu or Lira–Gulu highway. Taxis and public coaches terminate at the Gulu Bus Terminal, where authorized school shuttles operate during opening and visitation days.',
+  },
+  {
+    origin: 'By Charter Aircraft (Gulu Airstrip)',
+    directions: 'Gulu Airport receives domestic scheduled flights and humanitarian aviation charters. The campus is located 12 minutes drive from the terminal.',
+  },
+];
+---
+
+<Layout title="Contact Information" description="Official contact channels, campus location on Acholi Road, and directions for Grace Christian High School in Gulu, Northern Uganda.">
+
+  <!-- ════════════════════════════════════════
+       PAGE HERO (CLEAR & VIBRANT AFRICAN SECRETARIAT BACKDROP)
+  ════════════════════════════════════════ -->
+  <section class="relative bg-slate-950 text-white pt-32 pb-24 sm:pt-40 sm:pb-32 overflow-hidden border-b border-amber-400/20">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=2000&q=85"
+        alt="Grace Christian administrative secretariat and leadership"
+        class="w-full h-full object-cover opacity-65"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="section-tag text-amber-400">Administration &amp; Registry</div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-tight mt-2 mb-4 sm:mb-6">
+          Contact the <br/>
+          <span class="text-amber-400">Admissions Bureau</span>
+        </h1>
+        <p class="text-slate-200 text-sm sm:text-lg leading-relaxed font-normal drop-shadow">
+          Whether inquiring about Senior One entrance requirements, scheduling an official campus visitation, or arranging fee payments, our secretariat is prepared to assist you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       COMMUNICATION CHANNELS
+  ════════════════════════════════════════ -->
+  <section class="py-20 bg-slate-100/80 border-b border-slate-200 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 stagger -mt-28 relative z-20">
+        {contactChannels.map((c) => (
+          <div class="reveal border-t-4 border-amber-500 bg-white p-7 shadow-xl border-x border-b border-slate-200 hover:border-slate-900 transition-all duration-300">
+            <h3 class="font-serif font-bold text-lg text-slate-900 mb-2">{c.title}</h3>
+            <div class="text-slate-900 font-semibold text-sm mb-1 break-words">{c.detail}</div>
+            <p class="text-slate-500 text-xs mb-6 pb-4 border-b border-slate-100">{c.subtext}</p>
+            <a
+              href={c.actionLink}
+              class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-slate-900 transition-colors"
+            >
+              {c.actionText}
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       OFFICIAL INQUIRY FORM & LOCATION
+       (Optimized for Mobile Phone & Tablet Input)
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+        
+        <!-- Form Column -->
+        <div class="reveal-left lg:col-span-7 bg-slate-50 border border-slate-200 p-7 sm:p-10 shadow-sm">
+          <div class="section-tag">Electronic Dispatch</div>
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mt-2 mb-2">
+            Direct Communication Secretariat
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm mb-8">
+            Please fill the secure inquiry dispatch. Official responses are transmitted via email or phone within one business working day.
+          </p>
+
+          <form class="space-y-5 sm:space-y-6" novalidate>
+            <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="sender-name">
+                  Your Full Name *
+                </label>
+                <input
+                  id="sender-name"
+                  type="text"
+                  placeholder="e.g., Aciro Grace Apiyo"
+                  required
+                  class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-base sm:text-sm focus:outline-none focus:border-amber-500 transition-colors"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="sender-phone">
+                  Telephone Number *
+                </label>
+                <input
+                  id="sender-phone"
+                  type="tel"
+                  placeholder="+256 784 811 929"
+                  required
+                  class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-base sm:text-sm focus:outline-none focus:border-amber-500 transition-colors"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="sender-email">
+                Electronic Mail Address *
+              </label>
+              <input
+                id="sender-email"
+                type="email"
+                placeholder="guardian@example.com"
+                required
+                class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-base sm:text-sm focus:outline-none focus:border-amber-500 transition-colors"
+              />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="inquiry-subject">
+                Inquiry Category *
+              </label>
+              <select
+                id="inquiry-subject"
+                required
+                class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-base sm:text-sm focus:outline-none focus:border-amber-500 transition-colors"
+              >
+                <option value="" disabled selected>Select appropriate subject...</option>
+                <option>Senior One / Senior Five Admissions</option>
+                <option>Tuition Verification &amp; Bank Slips</option>
+                <option>Candidate Results &amp; Certificates</option>
+                <option>Residential Boarding &amp; Student Welfare</option>
+                <option>Board of Directors &amp; Governance</option>
+                <option>General Administration</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="inquiry-body">
+                Official Message *
+              </label>
+              <textarea
+                id="inquiry-body"
+                rows="5"
+                required
+                placeholder="State your query clearly with all relevant candidate references..."
+                class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-base sm:text-sm focus:outline-none focus:border-amber-500 transition-colors resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-4 bg-slate-900 hover:bg-slate-800 text-amber-400 font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-md"
+            >
+              Transmit Official Inquiry
+            </button>
+          </form>
+        </div>
+
+        <!-- Campus Access & Schedule Right Column -->
+        <div class="reveal-right lg:col-span-5 space-y-6 sm:space-y-8">
+          
+          <div class="bg-slate-50 border border-slate-200 p-7 sm:p-8">
+            <h3 class="font-serif font-bold text-xl text-slate-900 mb-4 pb-3 border-b border-slate-200">
+              Campus Visiting Regulations
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+              To preserve instructional focus and dormitory safety, unannounced personal visits are not permitted during school weekdays. Prospective parents must report directly to the security gatehouse for visitor passes.
+            </p>
+            <div class="space-y-2.5 text-xs text-slate-600">
+              <div class="flex justify-between py-1.5 border-b border-slate-200">
+                <span>Admissions Office Hours:</span>
+                <strong class="text-slate-900">Mon–Fri: 8:00 AM – 5:00 PM</strong>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-slate-200">
+                <span>Saturday Secretariat:</span>
+                <strong class="text-slate-900">8:30 AM – 1:00 PM</strong>
+              </div>
+              <div class="flex justify-between py-1.5">
+                <span>Parent Visitation Day:</span>
+                <strong class="text-amber-700">First Sunday of Each Term</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 text-white p-7 sm:p-8 border border-amber-400/30">
+            <h3 class="font-serif font-bold text-xl text-amber-400 mb-4 pb-3 border-b border-slate-800">
+              Transit Directions to Campus
+            </h3>
+            <div class="space-y-4">
+              {travelRoutes.map((r) => (
+                <div>
+                  <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-1">{r.origin}</h5>
+                  <p class="text-slate-400 text-xs leading-relaxed">{r.directions}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CAMPUS LOCATION PHOTOGRAPHIC BANNER
+  ════════════════════════════════════════ -->
+  <section class="relative py-24 bg-slate-950 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=2000&q=85"
+        alt="Grace Christian campus environment in Gulu City"
+        class="w-full h-full object-cover opacity-60"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div class="section-tag text-amber-400 justify-center mb-3">Campus Reception</div>
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
+        Plan an In-Person Campus Visitation
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+        We encourage prospective families to tour our science laboratories, student hostels, sports grounds, and classrooms along Acholi Road in Gulu City.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="tel:+256784811929" class="btn-gold py-3.5 px-8 text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          Direct Line: +256 784 811 929
+        </a>
+        <a href="mailto:info@gracechristiangulu.ac.ug" class="btn-outline-white py-3.5 px-6 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          info@gracechristiangulu.ac.ug
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

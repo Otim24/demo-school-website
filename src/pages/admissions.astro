@@ -1,0 +1,418 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const steps = [
+  {
+    num: '01',
+    title: 'Acquire the Application Dossier',
+    desc: 'Download the formal application package from this portal or collect an official hard copy from our Admissions Bureau along Acholi Road in Gulu City.',
+  },
+  {
+    num: '02',
+    title: 'Assemble Academic Verification Documents',
+    desc: 'Prepare authenticated photocopies of Primary Leaving Examination (PLE) result slips for Senior One, or Uganda Certificate of Education (UCE) for Senior Five, accompanied by primary/secondary leaving certificates.',
+  },
+  {
+    num: '03',
+    title: 'Submission & Document Validation',
+    desc: 'Deliver completed dossiers to our Registrar or submit certified scans via admissions@gracechristiangulu.ac.ug alongside two recent passport-format photographs and medical clearance.',
+  },
+  {
+    num: '04',
+    title: 'Aptitude Assessment & Candidate Interview',
+    desc: 'Shortlisted candidates attend a morning diagnostic assessment in Mathematics and English Language, followed by an interview with the academic panel.',
+  },
+  {
+    num: '05',
+    title: 'Provisional Offer & Enrollment Deposit',
+    desc: 'Admission letters are issued within seven working days. Placement is secured through payment of the UGX 150,000 admission fee through designated bank accounts.',
+  },
+  {
+    num: '06',
+    title: 'Orientation & Term Commencement',
+    desc: 'Scholars report to their assigned residential halls on official opening day with prescribed uniform items and personal boarding necessities.',
+  },
+];
+
+const feeStructure = [
+  {
+    level: 'Ordinary Level (Senior 1 – Senior 4)',
+    boardingTerm: 'UGX 650,000',
+    dayTerm: 'UGX 350,000',
+    annualBoarding: 'UGX 1,950,000',
+    inclusions: 'Full tuition, laboratory consumables, library digital access, dormitory lodging, and 3 balanced daily meals.',
+  },
+  {
+    level: 'Advanced Level Sciences (Senior 5 – Senior 6)',
+    boardingTerm: 'UGX 750,000',
+    dayTerm: 'UGX 420,000',
+    annualBoarding: 'UGX 2,250,000',
+    inclusions: 'Tuition, advanced STEM apparatus, computer laboratory broadband, UNEB mock registration, and boarding.',
+  },
+  {
+    level: 'Advanced Level Arts & Humanities (Senior 5 – Senior 6)',
+    boardingTerm: 'UGX 720,000',
+    dayTerm: 'UGX 390,000',
+    annualBoarding: 'UGX 2,160,000',
+    inclusions: 'Tuition, seminar reading dossiers, debate league access, UNEB mock assessments, and residential lodging.',
+  },
+];
+
+const bankAccounts = [
+  { bank: 'Centenary Bank', branch: 'Gulu Branch', accountName: 'Grace Christian High School', accountNumber: '3100084592' },
+  { bank: 'Stanbic Bank Uganda', branch: 'Gulu Main Branch', accountName: 'Grace Christian High School', accountNumber: '9030018824' },
+];
+---
+
+<Layout title="Admissions & Fees" description="Enrollment process, fee structure, and admissions inquiry for Grace Christian High School in Gulu, Northern Uganda.">
+
+  <!-- ════════════════════════════════════════
+       PAGE HERO (CLEAR & VIBRANT AFRICAN SCHOLARS BACKDROP)
+  ════════════════════════════════════════ -->
+  <section class="relative bg-slate-950 text-white pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden border-b border-amber-400/20">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=85"
+        alt="African secondary school students on campus during enrollment"
+        class="w-full h-full object-cover opacity-65"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="section-tag text-amber-400">Admissions Office</div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-tight mt-2 mb-4 sm:mb-6">
+          Enrollment &amp; <br/>
+          <span class="text-amber-400">Financial Transparency</span>
+        </h1>
+        <p class="text-slate-200 text-sm sm:text-lg leading-relaxed font-normal drop-shadow">
+          We welcome applications from motivated young men and women of good character across Uganda and the East African Community. Review our admission criteria and approved fee schedule below.
+        </p>
+      </div>
+
+      <!-- Key Dates Strip -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-white/10 pt-8">
+        <div>
+          <span class="text-slate-400 text-xs uppercase tracking-widest block">Senior One Entry</span>
+          <span class="text-amber-400 font-serif font-bold text-xl sm:text-2xl mt-1 block">PLE Aggregate 4–12</span>
+        </div>
+        <div>
+          <span class="text-slate-400 text-xs uppercase tracking-widest block">Senior Five Entry</span>
+          <span class="text-amber-400 font-serif font-bold text-xl sm:text-2xl mt-1 block">Divisions 1 &amp; 2</span>
+        </div>
+        <div>
+          <span class="text-slate-400 text-xs uppercase tracking-widest block">Term Intake</span>
+          <span class="text-white font-serif font-bold text-xl sm:text-2xl mt-1 block">January 2025</span>
+        </div>
+        <div>
+          <span class="text-slate-400 text-xs uppercase tracking-widest block">Dossier Processing</span>
+          <span class="text-white font-serif font-bold text-xl sm:text-2xl mt-1 block">5–7 Work Days</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SIX-STEP ENROLLMENT PIPELINE
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-16">
+        <div class="section-tag">Procedure</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+          The Admission Protocol
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          A clear, standardized path from your initial inquiry to your scholar's first assembly.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger">
+        {steps.map((s) => (
+          <div class="reveal border border-slate-200 hover:border-amber-400 p-8 bg-slate-50/50 hover:bg-white transition-all duration-300 hover:shadow-lg">
+            <div class="text-amber-600 font-serif font-bold text-3xl mb-4 border-b border-slate-200 pb-3">
+              {s.num}
+            </div>
+            <h3 class="font-serif font-bold text-lg text-slate-900 mb-3">
+              {s.title}
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              {s.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PHOTOGRAPHIC BANNER: RESIDENTIAL LIFE
+  ════════════════════════════════════════ -->
+  <section class="relative py-24 bg-slate-950 text-white overflow-hidden border-y border-amber-400/20">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=2000&q=85"
+        alt="African secondary school students smiling in boarding uniform"
+        class="w-full h-full object-cover opacity-65"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl space-y-4">
+        <div class="section-tag text-amber-400">Boarding &amp; Pastoral Care</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">
+          A Wholesome Home Away From Home in Northern Uganda
+        </h2>
+        <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+          Boarding scholars enjoy spacious dormitories supervised by resident house parents, three wholesome balanced meals each day prepared under certified hygiene standards, uninterrupted power, and access to on-site health professionals.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+          <div class="p-3 bg-slate-900/80 border border-white/10">
+            <span class="text-amber-400 font-serif font-bold text-xl block">3 Meals</span>
+            <span class="text-slate-300 text-xs block mt-0.5">Balanced Daily Nutrition</span>
+          </div>
+          <div class="p-3 bg-slate-900/80 border border-white/10">
+            <span class="text-amber-400 font-serif font-bold text-xl block">24/7 Security</span>
+            <span class="text-slate-300 text-xs block mt-0.5">Gated Perimeter &amp; Guards</span>
+          </div>
+          <div class="p-3 bg-slate-900/80 border border-white/10 col-span-2 sm:col-span-1">
+            <span class="text-amber-400 font-serif font-bold text-xl block">Chapel</span>
+            <span class="text-slate-300 text-xs block mt-0.5">Daily Spiritual Guidance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FEE STRUCTURE TABLE
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-slate-100/70 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="section-tag justify-center">Fiscal Schedule</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+          Approved Institutional Fees
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          All statutory school fees are quoted in Uganda Shillings (UGX). We operate an all-inclusive policy with zero unauthorized classroom levies.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        {feeStructure.map((f) => (
+          <div class="reveal bg-white border border-slate-200 p-8 shadow-sm hover:border-amber-400 transition-all duration-300">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-100">
+              <div>
+                <span class="text-amber-600 text-xs font-bold uppercase tracking-wider block mb-1">Academic Section</span>
+                <h3 class="text-xl sm:text-2xl font-serif font-bold text-slate-900">{f.level}</h3>
+              </div>
+              <div class="flex flex-wrap items-center gap-6">
+                <div class="border-l-2 border-slate-900 pl-4">
+                  <span class="text-slate-400 text-[11px] uppercase tracking-wider block">Boarding / Term</span>
+                  <span class="text-slate-950 font-serif font-bold text-2xl">{f.boardingTerm}</span>
+                </div>
+                <div class="border-l-2 border-slate-300 pl-4">
+                  <span class="text-slate-400 text-[11px] uppercase tracking-wider block">Day Scholar / Term</span>
+                  <span class="text-slate-700 font-serif font-bold text-2xl">{f.dayTerm}</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500">
+              <span><strong>Itemized Inclusions:</strong> {f.inclusions}</span>
+              <span class="text-slate-900 font-semibold whitespace-nowrap">Annual Boarding: {f.annualBoarding}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Authorized Banking Channels -->
+      <div class="reveal mt-12 bg-slate-900 text-white p-8 border border-amber-400/30">
+        <h4 class="text-amber-400 font-serif font-bold text-lg mb-2">Approved Banking Payment Channels</h4>
+        <p class="text-slate-300 text-xs leading-relaxed mb-6">
+          To maintain strict financial integrity, cash payments are strictly forbidden at the campus bureau. All tuition deposits must be completed via bank slip or EFT into the following designated accounts:
+        </p>
+        <div class="grid sm:grid-cols-2 gap-6">
+          {bankAccounts.map((b) => (
+            <div class="border border-slate-800 bg-slate-950/60 p-5">
+              <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block">{b.bank}</span>
+              <div class="text-white font-serif font-bold text-base mt-1">{b.accountName}</div>
+              <div class="text-slate-400 text-xs mt-2 space-y-0.5">
+                <div>Account Number: <strong class="text-white font-mono tracking-wider">{b.accountNumber}</strong></div>
+                <div>Branch: {b.branch}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       APPLICATION FORM & REQUIRED DOSSIER
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+        
+        <!-- Checklist Left Column -->
+        <div class="reveal-left lg:col-span-5 space-y-6">
+          <div class="section-tag">Verification Checklist</div>
+          <h2 class="text-3xl font-serif font-bold text-slate-900">
+            Mandatory Documents for Registration
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Please ensure you have authenticated copies of each credential prior to submitting your formal application. Incomplete dossiers cannot be reviewed by the Academic Board.
+          </p>
+
+          <ul class="space-y-4 pt-2">
+            {[
+              'Original and duplicate copy of national PLE or UCE result slip',
+              'Official primary or secondary school leaving recommendation',
+              'Certified copy of birth certificate issued by NIRA Uganda',
+              'Four recent identical colour passport photographs (white background)',
+              'Medical fitness assessment signed by a registered practitioner',
+              'National identification card copy of parent or lawful guardian',
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-sm text-slate-700">
+                <span class="w-5 h-5 border border-amber-500 bg-amber-50 text-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">
+                  ✓
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div class="pt-6 border-t border-slate-200">
+            <h4 class="font-serif font-bold text-slate-900 text-base mb-2">Bursaries &amp; Academic Scholarships</h4>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Grace Christian High School maintains an endowment reserve funding up to 50% tuition reduction for candidates achieving Aggregate 4 in PLE or Grade 1 (under 12 aggregates) in UCE from financially vulnerable households in Northern Uganda.
+            </p>
+          </div>
+        </div>
+
+        <!-- Admissions Form Right Column -->
+        <div class="reveal-right lg:col-span-7">
+          <div class="bg-slate-50 border border-slate-200 p-8 sm:p-10 shadow-sm">
+            <h3 class="font-serif font-bold text-2xl text-slate-900 mb-2">
+              Online Admission Inquiry &amp; Pre-Registration
+            </h3>
+            <p class="text-slate-500 text-xs sm:text-sm mb-8">
+              Complete this pre-registration form. Our Registrar will reply within 24 hours with the official prospectus and test appointment.
+            </p>
+
+            <form class="space-y-6" novalidate>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="student-name">
+                  Candidate's Full Name (As registered with UNEB) *
+                </label>
+                <input
+                  id="student-name"
+                  type="text"
+                  placeholder="e.g., Okello Daniel Francis"
+                  required
+                  class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-amber-500 transition-colors"
+                />
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="parent-name">
+                    Parent / Guardian Full Name *
+                  </label>
+                  <input
+                    id="parent-name"
+                    type="text"
+                    placeholder="e.g., Dr. Mary Auma"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-amber-500 transition-colors"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="telephone">
+                    Primary Telephone Number *
+                  </label>
+                  <input
+                    id="telephone"
+                    type="tel"
+                    placeholder="+256 784 811 929"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-base sm:text-sm focus:outline-none focus:border-amber-500 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="target-class">
+                    Target Class / Track *
+                  </label>
+                  <select
+                    id="target-class"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-amber-500 transition-colors"
+                  >
+                    <option value="" disabled selected>Select class level...</option>
+                    <option>Senior One (S.1) - O-Level Entry</option>
+                    <option>Senior Two (S.2) - Transfer</option>
+                    <option>Senior Three (S.3) - Transfer</option>
+                    <option>Senior Five (S.5) - A-Level Sciences</option>
+                    <option>Senior Five (S.5) - A-Level Arts &amp; Economics</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="residential">
+                    Boarding Status *
+                  </label>
+                  <select
+                    id="residential"
+                    required
+                    class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-amber-500 transition-colors"
+                  >
+                    <option value="" disabled selected>Select arrangement...</option>
+                    <option>Full Boarding Scholar</option>
+                    <option>Day Scholar</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2" for="notes">
+                  Prior School Attended &amp; Examination Aggregates
+                </label>
+                <textarea
+                  id="notes"
+                  rows="3"
+                  placeholder="State the school, PLE/UCE index number, aggregate score, and any special consideration..."
+                  class="w-full px-4 py-3 bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-amber-500 transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-4 bg-slate-900 hover:bg-slate-800 text-amber-400 font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-lg"
+              >
+                Submit Official Pre-Registration
+              </button>
+
+              <p class="text-center text-xs text-slate-500">
+                You may also telephone the Admissions Bureau directly:
+                <a href="tel:+256784811929" class="text-slate-900 font-bold hover:text-amber-600 transition-colors ml-1">+256 784 811 929</a>
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

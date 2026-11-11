@@ -1,0 +1,268 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const leadership = [
+  {
+    name: 'Rev. Dr. Samuel Okello, PhD',
+    role: 'Founder & Board Chair',
+    bio: 'Founder of Grace Christian Fellowship in 1999, Dr. Okello spearheaded the establishment of the school as an educational foundation for human capital development across Acholiland.',
+    department: 'Diocesan Board of Trustees',
+  },
+  {
+    name: 'Mrs. Eunice Atim, MEd',
+    role: 'Headmistress & Principal',
+    bio: 'An educator with two decades in secondary leadership, Mrs. Atim is renowned for elevating academic standards while maintaining an empathetic pastoral standard for all residential scholars.',
+    department: 'Executive Administration',
+  },
+  {
+    name: 'Mr. Patrick Ojok, BSc (Hons)',
+    role: 'Deputy Headmaster (Academics)',
+    bio: 'Former national UNEB examiner and curriculum consultant. Mr. Ojok coordinates practical laboratory assessments, revision symposia, and academic progress tracking.',
+    department: 'Academic Registry',
+  },
+  {
+    name: 'Sr. Mary Lacor, DipEd',
+    role: 'Dean of Student Affairs',
+    bio: 'Oversees residential welfare, health services, and student council governance, ensuring a disciplined, orderly, and uplifting campus community.',
+    department: 'Pastoral Care & Boarding',
+  },
+];
+
+const timeline = [
+  { year: '2003', title: 'Foundational Intake', desc: 'Inaugural cohort of 48 scholars commences in Gulu City with a dedicated staff of 6 educators.' },
+  { year: '2005', title: 'First UNEB S.4 Sitting', desc: 'The pioneer O-Level class achieves a 92% First Grade pass rate, establishing regional prominence.' },
+  { year: '2008', title: 'A-Level Section Launch', desc: 'Accreditation granted for Advanced Level Sciences and Arts tracks, expanding campus capacity.' },
+  { year: '2014', title: 'Permanent 12-Acre Campus', desc: 'Relocation to the modern multi-block facility on Acholi Road, featuring dedicated boarding hostels.' },
+  { year: '2019', title: 'STEM Centre Commissioning', desc: 'Installation of specialized Physics, Chemistry, and Biology laboratories equipped for national practicals.' },
+  { year: '2024', title: 'Regional Pass Rate Leader', desc: 'Ranked top performing non-government secondary school across Acholi and Lango sub-regions.' },
+];
+---
+
+<Layout title="About Us & History" description="The story, Christian mission, and administrative leadership of Grace Christian High School in Gulu, Northern Uganda.">
+
+  <!-- ════════════════════════════════════════
+       PAGE HERO WITH VIBRANT AFRICAN SCHOLARS PHOTOGRAPHY
+  ════════════════════════════════════════ -->
+  <section class="relative bg-slate-950 text-white pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden border-b border-amber-400/20">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=2000&q=85"
+        alt="African secondary school students engaged in disciplined study"
+        class="w-full h-full object-cover object-center opacity-65"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="section-tag text-amber-400">Institutional Heritage</div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-tight mt-2 mb-4 sm:mb-6">
+          Founded in Faith, <br/>
+          <span class="text-amber-400">Dedicated to Excellence</span>
+        </h1>
+        <p class="text-slate-200 text-sm sm:text-lg leading-relaxed font-normal drop-shadow">
+          For over two decades, Grace Christian High School has remained steadfast in its founding conviction: that genuine education must illuminate both intellect and conscience across Northern Uganda.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       TRIPTYCH: MISSION, VISION & MOTTO
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 stagger">
+        
+        <div class="reveal border-t-4 border-slate-900 bg-slate-50 p-8 shadow-sm">
+          <span class="text-amber-600 text-xs font-bold uppercase tracking-widest block mb-2">Our Mission</span>
+          <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">Intellectual &amp; Spiritual Formation</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            To deliver rigorous, Christian-grounded secondary education that equips young Africans with critical intellectual capacity, moral clarity, and practical skills to transform their societies.
+          </p>
+        </div>
+
+        <div class="reveal border-t-4 border-amber-500 bg-slate-50 p-8 shadow-sm">
+          <span class="text-amber-600 text-xs font-bold uppercase tracking-widest block mb-2">Our Vision</span>
+          <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">A Beacon in Eastern Africa</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            To stand as the benchmark model for secondary educational distinction in Uganda, known for graduates who lead with competence, integrity, and servant hearts.
+          </p>
+        </div>
+
+        <div class="reveal border-t-4 border-slate-700 bg-slate-50 p-8 shadow-sm">
+          <span class="text-amber-600 text-xs font-bold uppercase tracking-widest block mb-2">School Motto</span>
+          <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">"Light and Excellence"</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Drawn from Matthew 5:14, reminding each scholar that academic talent is a stewardship meant to dispel darkness and elevate humanity.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PHOTOGRAPHIC BANNER: LIFE IN ACHOLILAND
+  ════════════════════════════════════════ -->
+  <section class="relative py-28 bg-slate-950 text-white overflow-hidden border-y border-amber-400/20">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2000&q=85"
+        alt="African secondary teacher instructing classroom in Northern Uganda"
+        class="w-full h-full object-cover object-center opacity-65"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <div class="section-tag text-amber-400">Living Our Values</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4 leading-tight">
+          Nurturing Uganda's Future in a Loving, Disciplined Environment
+        </h2>
+        <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-8">
+          From morning prayers at dawn to late-evening supervised prep, our 12-acre campus off Acholi Road provides an orderly, safe, and academically rigorous sanctuary where every scholar is known by name.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div class="p-3 bg-slate-900/80 border border-white/10">
+            <span class="text-amber-400 font-serif font-bold text-xl block">12 Acres</span>
+            <span class="text-slate-300 text-xs block mt-0.5">Secure Gated Campus</span>
+          </div>
+          <div class="p-3 bg-slate-900/80 border border-white/10">
+            <span class="text-amber-400 font-serif font-bold text-xl block">100%</span>
+            <span class="text-slate-300 text-xs block mt-0.5">Solar &amp; Generator Backup</span>
+          </div>
+          <div class="p-3 bg-slate-900/80 border border-white/10 col-span-2 sm:col-span-1">
+            <span class="text-amber-400 font-serif font-bold text-xl block">Full Infirmary</span>
+            <span class="text-slate-300 text-xs block mt-0.5">Resident Medical Officer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CHRONOLOGICAL TIMELINE
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <div class="reveal-left lg:col-span-5 space-y-6">
+          <div class="section-tag">Historical Context</div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">
+            Rebuilding Northern Uganda through Education
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            In the early 2000s, Northern Uganda was emerging from an era of severe regional disruption. Infrastructure was damaged and families struggled to access reputable secondary schooling without sending their children 350 kilometres away to Kampala.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Grace Christian Fellowship answered this challenge by acquiring initial classroom blocks off Acholi Road. From those initial 48 pupils, the institution has flourished into a regional academic powerhouse with modern science labs, computer hubs, and athletic grounds.
+          </p>
+
+          <div class="border-l-2 border-amber-500 pl-4 py-2 bg-white">
+            <span class="text-xs uppercase tracking-widest font-bold text-slate-900 block">Ministry Licensing</span>
+            <p class="text-slate-500 text-xs mt-1">Fully registered and licensed under the Uganda Ministry of Education and Sports (Reg No. PSS/G/042).</p>
+          </div>
+        </div>
+
+        <div class="reveal-right lg:col-span-7 space-y-6">
+          {timeline.map((item) => (
+            <div class="flex gap-6 p-6 bg-white border border-slate-200 hover:border-amber-400 transition-colors">
+              <span class="font-serif font-bold text-xl text-amber-600 whitespace-nowrap">{item.year}</span>
+              <div>
+                <h4 class="font-serif font-bold text-base text-slate-900 mb-1">{item.title}</h4>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ADMINISTRATIVE LEADERSHIP
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="section-tag justify-center">Governance</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+          School Administrative Council
+        </h2>
+        <p class="text-slate-600 text-sm mt-3">
+          Distinguished administrators bringing over 75 cumulative years of educational leadership to Northern Uganda.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 stagger">
+        {leadership.map((l) => (
+          <div class="reveal border border-slate-200 bg-slate-50/50 p-6 hover:bg-white hover:border-amber-400 transition-all duration-300 hover:shadow-lg">
+            <div class="w-12 h-12 bg-slate-900 border border-amber-400/50 flex items-center justify-center text-amber-400 font-serif font-bold text-lg mb-6">
+              {l.name.split(' ').slice(-1)[0][0]}
+            </div>
+            <h3 class="font-serif font-bold text-base text-slate-900 mb-1">
+              {l.name}
+            </h3>
+            <span class="text-amber-600 text-xs font-bold uppercase tracking-wider block mb-1">
+              {l.role}
+            </span>
+            <span class="text-slate-400 text-[11px] uppercase tracking-wider block mb-4 pb-3 border-b border-slate-200">
+              {l.department}
+            </span>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              {l.bio}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-14 text-center">
+        <a href="/leadership" class="btn-gold">
+          View Full Board of Directors &amp; Academic Faculty
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CTA BANNER (AFRICAN GRADUATION BACKDROP)
+  ════════════════════════════════════════ -->
+  <section class="relative py-24 bg-slate-950 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=85"
+        alt="African secondary scholars celebrating academic excellence"
+        class="w-full h-full object-cover opacity-60"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div class="section-tag text-amber-400 justify-center mb-3">Join Our Heritage</div>
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
+        Ready to Enroll Your Child for the 2025 Academic Year?
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+        Admissions are open for Senior One and Senior Five. Download the application dossier or reach out directly to our admissions team in Gulu.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/admissions" class="btn-gold py-3.5 px-8 text-xs font-bold uppercase tracking-widest">
+          Begin Admissions Process
+        </a>
+        <a href="tel:+256784811929" class="btn-outline-white py-3.5 px-6 text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          Call Admissions (+256 784 811 929)
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

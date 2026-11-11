@@ -1,0 +1,351 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const oLevelStreams = [
+  {
+    category: 'Core & Compulsory',
+    description: 'Foundational disciplines taken by every candidate throughout S.1 to S.4.',
+    subjects: ['English Language', 'Mathematics', 'Biology', 'Chemistry', 'Physics', 'History & Political Education', 'Geography', 'Christian Religious Education (CRE)'],
+  },
+  {
+    category: 'Applied Sciences & Tech',
+    description: 'Practical technical competencies preparing scholars for STEM pathways.',
+    subjects: ['Computer Studies & ICT', 'Agriculture (Theory & Practicals)', 'Technical Drawing & Graphics'],
+  },
+  {
+    category: 'Humanities & Languages',
+    description: 'Elective humanities and international languages offered under UNEB assessment.',
+    subjects: ['Commerce & Entrepreneurship', 'Literature in English', 'French Language', 'Luganda / Acholi Studies', 'Fine Art & Design'],
+  },
+];
+
+const scienceCombinations = [
+  {
+    code: 'PCB / Sub-Maths',
+    name: 'Physics, Chemistry, Biology',
+    subsidiary: 'Sub-Mathematics & General Paper',
+    career: 'Direct entry into Medicine, Surgery, Dental Surgery, Nursing, and Veterinary Sciences.',
+  },
+  {
+    code: 'PCM / Sub-ICT',
+    name: 'Physics, Chemistry, Mathematics',
+    subsidiary: 'Computer Studies & General Paper',
+    career: 'Civil, Electrical & Mechanical Engineering, Architecture, and Physical Sciences.',
+  },
+  {
+    code: 'BCM / Sub-Maths',
+    name: 'Biology, Chemistry, Mathematics',
+    subsidiary: 'Sub-Mathematics & General Paper',
+    career: 'Pharmacy, Food Science & Technology, Biochemistry, and Agricultural Engineering.',
+  },
+  {
+    code: 'MEG / Sub-ICT',
+    name: 'Mathematics, Economics, Geography',
+    subsidiary: 'Computer Studies & General Paper',
+    career: 'Quantitative Economics, Actuarial Science, Statistics, and Urban Planning.',
+  },
+];
+
+const artsCombinations = [
+  {
+    code: 'HEL / Divinity',
+    name: 'History, Economics, Literature',
+    subsidiary: 'Divinity & General Paper',
+    career: 'Bachelor of Laws (LLB), Mass Communication, Journalism, and Diplomatic Service.',
+  },
+  {
+    code: 'HGL / Sub-Maths',
+    name: 'History, Geography, Literature',
+    subsidiary: 'Sub-Mathematics & General Paper',
+    career: 'Public Administration, Environmental Management, and Secondary Education.',
+  },
+  {
+    code: 'EGM / Sub-ICT',
+    name: 'Economics, Geography, Mathematics',
+    subsidiary: 'Computer Studies & General Paper',
+    career: 'Business Administration, Accounting & Finance, and Real Estate Management.',
+  },
+  {
+    code: 'DEL / History',
+    name: 'Divinity, Economics, Literature',
+    subsidiary: 'History & General Paper',
+    career: 'Theological Studies, Community Development, Social Work, and Counseling.',
+  },
+];
+
+const examinationPractices = [
+  {
+    title: 'Standardized UNEB Mock Examinations',
+    desc: 'Candidates undergo three comprehensive mock assessment series simulating exact UNEB exam conditions and timing.',
+  },
+  {
+    title: 'Bi-Weekly Practical Science Labs',
+    desc: 'Every candidate performs individual bench experiments in Chemistry qualitative analysis, Physics mechanics, and Biology specimen dissection.',
+  },
+  {
+    title: 'Specialized Revision Symposia',
+    desc: 'Joint inter-school academic seminars held with top secondary schools across Northern and Central Uganda.',
+  },
+  {
+    title: 'Past-Paper Analytical Archive',
+    desc: 'A physical and digital archive spanning 20 years of UNEB past question papers with official examiner marking guides.',
+  },
+];
+---
+
+<Layout title="Academic Programmes" description="UNEB accredited O-Level and A-Level curriculum at Grace Christian High School in Gulu, Northern Uganda.">
+
+  <!-- ════════════════════════════════════════
+       PAGE HERO WITH STEM PHOTOGRAPHY (CLEAR & VIBRANT)
+  ════════════════════════════════════════ -->
+  <section class="relative bg-slate-950 text-white pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden border-b border-amber-400/20">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=2000&q=85"
+        alt="Science Laboratory experiments and STEM practicals"
+        class="w-full h-full object-cover opacity-65"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="section-tag text-amber-400">Curriculum &amp; Examination</div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-tight mt-2 mb-4 sm:mb-6">
+          Rigorous Academics, <br/>
+          <span class="text-amber-400">Proven National Results</span>
+        </h1>
+        <p class="text-slate-200 text-sm sm:text-lg leading-relaxed font-normal drop-shadow">
+          Grace Christian High School delivers the full Uganda National Examinations Board (UNEB) syllabus with an emphasis on empirical science, mathematical mastery, and persuasive articulation.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-white/10 pt-8">
+        <div>
+          <span class="text-slate-400 text-xs uppercase tracking-widest block">O-Level (UCE)</span>
+          <span class="text-white font-serif font-bold text-2xl mt-1 block">Senior 1 to 4</span>
+        </div>
+        <div>
+          <span class="text-slate-400 text-xs uppercase tracking-widest block">A-Level (UACE)</span>
+          <span class="text-white font-serif font-bold text-2xl mt-1 block">Senior 5 to 6</span>
+        </div>
+        <div>
+          <span class="text-slate-400 text-xs uppercase tracking-widest block">Regional UNEB Rank</span>
+          <span class="text-amber-400 font-serif font-bold text-2xl mt-1 block">#1 Non-Govt</span>
+        </div>
+        <div>
+          <span class="text-slate-400 text-xs uppercase tracking-widest block">Lab Workstations</span>
+          <span class="text-white font-serif font-bold text-2xl mt-1 block">120 Fully Fitted</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ORDINARY LEVEL SECTION
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div>
+          <div class="section-tag">Lower Secondary</div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+            Ordinary Level Curriculum (Senior 1 – Senior 4)
+          </h2>
+        </div>
+        <div class="border-l-2 border-slate-900 pl-4">
+          <span class="text-xs uppercase tracking-widest text-slate-400 block font-bold">Certification</span>
+          <span class="text-slate-950 font-serif font-bold text-lg">Uganda Certificate of Education (UCE)</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 stagger">
+        {oLevelStreams.map((s) => (
+          <div class="reveal border border-slate-200 bg-slate-50/50 p-8 hover:border-amber-400 transition-colors">
+            <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">{s.category}</h3>
+            <p class="text-slate-500 text-xs leading-relaxed mb-6 pb-4 border-b border-slate-200">
+              {s.description}
+            </p>
+            <ul class="space-y-2 text-sm text-slate-700">
+              {s.subjects.map((sub) => (
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 bg-amber-500"></span>
+                  <span>{sub}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PHOTOGRAPHIC BANNER: STEM EXCELLENCE IN GULU
+  ════════════════════════════════════════ -->
+  <section class="relative py-24 bg-slate-950 text-white overflow-hidden border-y border-amber-400/20">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=2000&q=85"
+        alt="Hands-on Chemistry, Biology and Physics laboratory benches"
+        class="w-full h-full object-cover opacity-65"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl space-y-4">
+        <div class="section-tag text-amber-400">Practical STEM Mastery</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">
+          Every Science Candidate Conducts Individual Lab Bench Experiments
+        </h2>
+        <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+          Unlike crowded centres where students merely observe teacher demonstrations, Grace Christian provides 120 fully equipped workstations for individual UNEB Chemistry qualitative analysis, Physics mechanics, and Biology specimen dissection.
+        </p>
+        <div class="pt-2 flex flex-wrap gap-6">
+          <div class="border-l-2 border-amber-400 pl-4">
+            <span class="text-white font-serif font-bold text-xl block">120 Benches</span>
+            <span class="text-slate-300 text-xs">Individual Lab Stations</span>
+          </div>
+          <div class="border-l-2 border-amber-400 pl-4">
+            <span class="text-white font-serif font-bold text-xl block">3 Labs</span>
+            <span class="text-slate-300 text-xs">Dedicated Physics, Chem, Bio</span>
+          </div>
+          <div class="border-l-2 border-amber-400 pl-4">
+            <span class="text-white font-serif font-bold text-xl block">Full Solar</span>
+            <span class="text-slate-300 text-xs">Uninterrupted Electricity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ADVANCED LEVEL SCIENCES
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-14">
+        <div class="section-tag">Upper Secondary STEM</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+          Advanced Level Science Combinations
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Prescribed three-principal subject combinations approved by the Ministry of Education and Sports for university matriculation.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 stagger">
+        {scienceCombinations.map((c) => (
+          <div class="reveal bg-white border border-slate-200 hover:border-amber-400 p-8 shadow-sm transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 bg-slate-900 text-amber-400 font-mono font-bold text-xs uppercase tracking-wider">
+                {c.code}
+              </span>
+              <span class="text-slate-400 text-xs">UACE Science Stream</span>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">{c.name}</h3>
+            <div class="text-xs text-slate-500 mb-4 pb-3 border-b border-slate-100">
+              <strong>Mandatory Subsidiary:</strong> {c.subsidiary}
+            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              <strong>Career Destinations:</strong> {c.career}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ADVANCED LEVEL ARTS & HUMANITIES
+  ════════════════════════════════════════ -->
+  <section class="py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-14">
+        <div class="section-tag">Upper Secondary Arts &amp; Social Sciences</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mt-2">
+          Advanced Level Humanities Combinations
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Cultivating critical jurisprudence, economic analysis, literary critique, and administrative acumen.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 stagger">
+        {artsCombinations.map((c) => (
+          <div class="reveal bg-white border border-slate-200 hover:border-amber-400 p-8 shadow-sm transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 bg-amber-500 text-slate-950 font-mono font-bold text-xs uppercase tracking-wider">
+                {c.code}
+              </span>
+              <span class="text-slate-400 text-xs">UACE Arts Stream</span>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">{c.name}</h3>
+            <div class="text-xs text-slate-500 mb-4 pb-3 border-b border-slate-100">
+              <strong>Mandatory Subsidiary:</strong> {c.subsidiary}
+            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              <strong>Career Destinations:</strong> {c.career}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       EXAMINATION PREPARATION PROTOCOL (RICH ARCHIVAL LIBRARY BACKDROP)
+  ════════════════════════════════════════ -->
+  <section class="relative py-24 bg-slate-950 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=2000&q=85"
+        alt="Grace Christian academic reference library"
+        class="w-full h-full object-cover opacity-50"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-slate-950/70"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="section-tag text-amber-400 justify-center">Academic Rigour</div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2">
+          UNEB Examination Mastery
+        </h2>
+        <p class="text-slate-400 text-sm mt-3">
+          Our scholars do not enter examinations relying on luck. We operate a structured, tested revision framework that guarantees peak performance.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 stagger">
+        {examinationPractices.map((p, i) => (
+          <div class="reveal border border-slate-800 bg-slate-900/60 p-6 hover:border-amber-400 transition-colors">
+            <span class="text-amber-400 font-serif font-bold text-xl block mb-3">0{i + 1}</span>
+            <h4 class="font-serif font-bold text-base text-white mb-2">{p.title}</h4>
+            <p class="text-slate-400 text-xs leading-relaxed">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-14 flex flex-wrap justify-center gap-4">
+        <a href="/admissions" class="btn-gold">
+          Apply to Join Our Academic Community
+        </a>
+        <a href="/leadership" class="btn-outline-white">
+          Meet Departmental Teaching Faculty
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

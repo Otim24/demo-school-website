@@ -1,0 +1,72 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Grace Christian High School – Premier secondary institution in Gulu, Northern Uganda, offering UNEB curriculum O-Level and A-Level academic programmes.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} | Grace Christian High School`} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | Grace Christian High School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-50 text-slate-800 overflow-x-hidden">
+    <Navbar />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- ── Dynamic Scroll Reconstruct & Deconstruct Script ── -->
+    <script>
+      function initScrollReconstruct() {
+        const selectors = '.reveal, .reveal-scale, .reveal-left, .reveal-right';
+        const els = document.querySelectorAll<HTMLElement>(selectors);
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Reconstruct when scrolling in
+                entry.target.classList.add('visible');
+              } else {
+                // Deconstruct when scrolling away
+                entry.target.classList.remove('visible');
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+            rootMargin: '0px 0px -30px 0px'
+          }
+        );
+
+        els.forEach((el) => observer.observe(el));
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollReconstruct);
+      } else {
+        initScrollReconstruct();
+      }
+    </script>
+  </body>
+</html>
