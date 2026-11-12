@@ -103,90 +103,55 @@ const news = [
 <Layout title="Home" description="Grace Christian High School – Leading secondary boarding institution in Gulu, Northern Uganda. UNEB O-Level and A-Level curriculum.">
 
   <!-- ════════════════════════════════════════
-       MINIMALISTIC, FUNCTIONAL & PRESTIGIOUS HERO SECTION
-       (Fully Optimized for Mobile Phones & Tablets)
+       MINIMAL HERO
   ════════════════════════════════════════ -->
-  <section class="relative min-h-[82vh] sm:min-h-[88vh] flex items-center justify-center bg-slate-950 overflow-hidden pt-32 pb-14 sm:pt-40 sm:pb-20 lg:pt-48 lg:pb-24">
-    <!-- Authentic African Classroom Photography Background (Vibrant & Clear) -->
+  <section class="relative bg-slate-950 text-white overflow-hidden min-h-[100svh] flex flex-col">
     <div class="absolute inset-0 z-0">
       <img
         src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=2000&q=85"
-        alt="African secondary school students smiling in classroom uniform"
-        class="w-full h-full object-cover object-center opacity-70"
+        alt="African secondary school students in uniform"
+        class="w-full h-full object-cover object-center"
+        fetchpriority="high"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/50"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/20 md:via-slate-950/60"></div>
+      <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950 to-transparent"></div>
     </div>
 
-    <!-- Main Clean Minimalistic Content -->
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      
-      <!-- Accreditation & Subtitle -->
-      <div class="reveal inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-500/20 border border-amber-400/50 text-amber-300 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] mb-4 sm:mb-6 shadow-lg backdrop-blur-sm">
-        <span>UNEB Examination Centre #1247-C</span>
-        <span class="text-white/40">·</span>
-        <span>Gulu City, Uganda</span>
-      </div>
-
-      <!-- Dignified Clean Headline -->
-      <h1 class="reveal text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white tracking-tight leading-[1.12] mb-4 sm:mb-6">
-        Grace Christian High School
-        <span class="block text-xl sm:text-3xl md:text-4xl text-amber-400 font-sans font-semibold tracking-normal mt-2 sm:mt-3">
-          Disciplined Minds. Principled Leaders.
-        </span>
-      </h1>
-
-      <p class="reveal text-slate-200 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-normal mb-8 sm:mb-10 px-2 drop-shadow">
-        Northern Uganda's premier secondary boarding school. Providing rigorous UNEB O-Level &amp; A-Level education grounded in Christian values since 2003.
-      </p>
-
-      <!-- Primary Action Buttons (Touch-Friendly, Mobile & Tablet Streamlined) -->
-      <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-lg mx-auto">
-        <a href="/admissions" class="btn-gold w-full sm:w-auto text-center py-3.5 px-8 text-xs font-bold uppercase tracking-widest shadow-xl">
-          Apply for 2025 Placement
-        </a>
-        <div class="grid grid-cols-2 gap-2 w-full sm:w-auto sm:flex sm:items-center">
-          <a href="/academics" class="btn-outline-white py-3 px-5 text-xs font-bold uppercase tracking-wider text-center">
-            Academics
-          </a>
-          <a href="tel:+256784811929" class="btn-outline-white py-3 px-5 text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-1.5">
-            <svg class="w-3.5 h-3.5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
-            <span>Call Us</span>
-          </a>
+    <div class="relative z-10 flex-1 flex items-end max-w-7xl w-full mx-auto px-5 sm:px-8 lg:px-10 pt-36 pb-10 sm:pb-14">
+      <div class="max-w-2xl">
+        <p class="reveal text-amber-400 text-[11px] sm:text-xs font-bold uppercase tracking-[0.3em] mb-5">Gulu, Northern Uganda &nbsp;&middot;&nbsp; Est. 2003</p>
+        <h1 class="reveal text-4xl sm:text-6xl lg:text-7xl font-serif font-bold leading-[1.05] tracking-tight">
+          Disciplined minds.<br />
+          <span class="text-amber-400">Principled leaders.</span>
+        </h1>
+        <p class="reveal mt-6 text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl">
+          Grace Christian High School &mdash; a UNEB-accredited boarding and day school for O-Level and A-Level scholars.
+        </p>
+        <div class="reveal mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <a href="/admissions" class="btn-gold py-3.5 px-8 text-xs font-bold uppercase tracking-widest">Apply for 2025</a>
+          <a href="/academics" class="text-white text-sm font-semibold border-b border-amber-400 pb-0.5 hover:text-amber-400 transition-colors">Explore academics &rarr;</a>
         </div>
       </div>
+    </div>
 
+    <!-- Hairline fact bar -->
+    <div class="relative z-10 border-t border-white/15 bg-slate-950/60 backdrop-blur-sm">
+      <dl class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 grid grid-cols-3 divide-x divide-white/15">
+        <div class="py-4 sm:py-5 pr-3 sm:pr-6">
+          <dt class="text-slate-400 text-[10px] sm:text-[11px] uppercase tracking-widest">UNEB Grade 1&ndash;2</dt>
+          <dd class="font-serif text-xl sm:text-3xl font-bold text-white mt-1">97.4%</dd>
+        </div>
+        <div class="py-4 sm:py-5 px-3 sm:px-6">
+          <dt class="text-slate-400 text-[10px] sm:text-[11px] uppercase tracking-widest">Scholars</dt>
+          <dd class="font-serif text-xl sm:text-3xl font-bold text-white mt-1">1,200+</dd>
+        </div>
+        <div class="py-4 sm:py-5 pl-3 sm:pl-6">
+          <dt class="text-slate-400 text-[10px] sm:text-[11px] uppercase tracking-widest">Intake</dt>
+          <dd class="font-serif text-xl sm:text-3xl font-bold text-white mt-1">S.1 &amp; S.5</dd>
+        </div>
+      </dl>
     </div>
   </section>
-
-  <!-- ════════════════════════════════════════
-       ARCHITECTURAL INSTITUTIONAL HIGHLIGHTS STRIP
-       (Clean, Non-Crowded, Touch-Friendly on Phones & Tablets)
-  ════════════════════════════════════════ -->
-  <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-8 mb-8 sm:mb-12">
-    <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
-      <a href="/admissions" class="p-4 sm:p-5 bg-slate-900 border border-slate-800 hover:border-amber-400/70 shadow-xl transition-all duration-300 group block">
-        <span class="text-amber-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest block mb-1 group-hover:text-amber-300">Intake 2025</span>
-        <span class="text-white text-xs sm:text-sm font-semibold block">S.1 &amp; S.5 Admissions</span>
-        <span class="text-slate-400 text-[11px] mt-1 hidden sm:block">Applications open for Day &amp; Boarding scholars &rarr;</span>
-      </a>
-      <a href="/academics" class="p-4 sm:p-5 bg-slate-900 border border-slate-800 hover:border-amber-400/70 shadow-xl transition-all duration-300 group block">
-        <span class="text-amber-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest block mb-1 group-hover:text-amber-300">UNEB Performance</span>
-        <span class="text-white text-xs sm:text-sm font-semibold block">97.4% Grade 1 &amp; 2</span>
-        <span class="text-slate-400 text-[11px] mt-1 hidden sm:block">Ranked #1 non-govt school in Northern Uganda &rarr;</span>
-      </a>
-      <a href="/leadership" class="p-4 sm:p-5 bg-slate-900 border border-slate-800 hover:border-amber-400/70 shadow-xl transition-all duration-300 group block">
-        <span class="text-amber-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest block mb-1 group-hover:text-amber-300">Faculty Ratio</span>
-        <span class="text-white text-xs sm:text-sm font-semibold block">1:15 Mentorship</span>
-        <span class="text-slate-400 text-[11px] mt-1 hidden sm:block">Resident educators living on Acholi Road campus &rarr;</span>
-      </a>
-      <a href="mailto:info@gracechristiangulu.ac.ug" class="p-4 sm:p-5 bg-slate-900 border border-slate-800 hover:border-amber-400/70 shadow-xl transition-all duration-300 group block">
-        <span class="text-amber-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest block mb-1 group-hover:text-amber-300">Direct Secretariat</span>
-        <span class="text-white text-xs sm:text-sm font-semibold block truncate">info@gracechristiangulu.ac.ug</span>
-        <span class="text-slate-400 text-[11px] mt-1 hidden sm:block">Official inquiries &amp; campus visitation booking &rarr;</span>
-      </a>
-    </div>
-  </div>
-
   <!-- ════════════════════════════════════════
        INSTITUTIONAL METRICS
   ════════════════════════════════════════ -->
@@ -292,9 +257,9 @@ const news = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 stagger">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10 stagger">
         {pillars.map((p, i) => (
-          <div class="reveal group border border-slate-200 hover:border-amber-400 bg-white p-7 sm:p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="reveal group border-t-2 border-slate-900 hover:border-amber-500 pt-6 pb-4 transition-colors duration-300">
             <div class="flex items-center justify-between mb-5">
               <span class="font-serif font-bold text-2xl text-slate-300 group-hover:text-amber-500 transition-colors">
                 {String(i + 1).padStart(2, '0')}
@@ -461,7 +426,7 @@ const news = [
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 stagger">
         {news.map((item) => (
-          <article class="reveal group bg-white border border-slate-200 hover:border-amber-400 p-7 sm:p-8 transition-all duration-300 hover:shadow-xl">
+          <article class="reveal group border-t-2 border-slate-900 hover:border-amber-500 pt-6 transition-colors duration-300">
             <div class="flex items-center justify-between text-xs text-slate-400 mb-4 pb-3 border-b border-slate-100">
               <span class="font-bold text-amber-600 uppercase tracking-wider">{item.category}</span>
               <span>{item.date}</span>

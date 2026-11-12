@@ -163,7 +163,7 @@ const examinationPractices = [
 
       <div class="grid md:grid-cols-3 gap-8 stagger">
         {oLevelStreams.map((s) => (
-          <div class="reveal border border-slate-200 bg-slate-50/50 p-8 hover:border-amber-400 transition-colors">
+          <div class="reveal border-t-2 border-slate-900 hover:border-amber-500 pt-6 transition-colors">
             <h3 class="font-serif font-bold text-xl text-slate-900 mb-2">{s.category}</h3>
             <p class="text-slate-500 text-xs leading-relaxed mb-6 pb-4 border-b border-slate-200">
               {s.description}
@@ -239,9 +239,9 @@ const examinationPractices = [
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 stagger">
+      <div class="grid md:grid-cols-2 gap-x-12 gap-y-4 stagger">
         {scienceCombinations.map((c) => (
-          <div class="reveal bg-white border border-slate-200 hover:border-amber-400 p-8 shadow-sm transition-all duration-300">
+          <div class="reveal border-t border-slate-300 hover:border-amber-500 pt-6 pb-6 transition-colors duration-300">
             <div class="flex items-center justify-between mb-4">
               <span class="px-3 py-1 bg-slate-900 text-amber-400 font-mono font-bold text-xs uppercase tracking-wider">
                 {c.code}
@@ -278,9 +278,9 @@ const examinationPractices = [
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 stagger">
+      <div class="grid md:grid-cols-2 gap-x-12 gap-y-4 stagger">
         {artsCombinations.map((c) => (
-          <div class="reveal bg-white border border-slate-200 hover:border-amber-400 p-8 shadow-sm transition-all duration-300">
+          <div class="reveal border-t border-slate-300 hover:border-amber-500 pt-6 pb-6 transition-colors duration-300">
             <div class="flex items-center justify-between mb-4">
               <span class="px-3 py-1 bg-amber-500 text-slate-950 font-mono font-bold text-xs uppercase tracking-wider">
                 {c.code}
